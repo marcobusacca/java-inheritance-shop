@@ -36,6 +36,18 @@ public class Cuffie extends Prodotto {
 		this.cablate = cablate;
 	}
 	
+	
+	@Override
+	public double getPrezzoScontato() {
+		
+		if (isCablate()) {
+			return getPrezzoCompleto() * (100 - 7) / 100;
+		}
+		
+		return getPrezzoCompleto() * (100 - 2) / 100;
+	}
+	
+	
 	@Override
 	public String toString() {
 

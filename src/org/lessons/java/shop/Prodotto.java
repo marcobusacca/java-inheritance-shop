@@ -80,7 +80,7 @@ public class Prodotto {
 	}
 	public String getPrezzoPieno() {
 		
-		return String.format("%.02f", getPrezzo() * (100 + iva) / 100) + "€";
+		return String.format("%.02f", getPrezzo() * (100 + getIva()) / 100) + "€";
 	}
 	public String getCodiceFormattato() {
 		
@@ -89,6 +89,16 @@ public class Prodotto {
 	public String getNomeEsteso() {
 		
 		return getCodiceFormattato() + "-" + getNome();
+	}
+	
+	
+	public double getPrezzoCompleto() {
+		
+		return getPrezzo() * (100 + getIva()) / 100;
+	}
+	public double getPrezzoScontato() {
+
+		return getPrezzoCompleto() * (100 - 2) / 100;
 	}
 	
 	

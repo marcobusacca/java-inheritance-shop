@@ -30,6 +30,17 @@ public class Smartphone extends Prodotto {
 	
 	
 	@Override
+	public double getPrezzoScontato() {
+		
+		if (getQuantitaMemoria() < 32) {
+			return getPrezzoCompleto() * (100 - 5) / 100;
+		}
+		
+		return getPrezzoCompleto() * (100 - 2) / 100;
+	}
+	
+	
+	@Override
 	public String toString() {
 
 		return "\n------------------\n"

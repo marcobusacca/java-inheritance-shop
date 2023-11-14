@@ -28,6 +28,18 @@ public class Televisori extends Prodotto {
 		this.smart = smart;
 	}
 	
+	
+	@Override
+	public double getPrezzoScontato() {
+		
+		if (!isSmart()) {
+			return getPrezzoCompleto() * (100 - 10) / 100;
+		}
+		
+		return getPrezzoCompleto() * (100 - 2) / 100;
+	}
+	
+	
 	@Override
 	public String toString() {
 

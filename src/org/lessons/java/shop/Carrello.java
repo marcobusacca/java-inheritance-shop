@@ -102,12 +102,38 @@ public class Carrello {
 				}
 			}
 		}
-		
-		in.close();
 
 		for (int i = 0; i < prodottiIndex; i++) {
 			
 			System.out.println(prodotti[i]);
 		}
+		
+		System.out.print("\nPossiedi una carta fedeltà? (si | no): ");
+		String strCartaFedelta = in.nextLine().toLowerCase();
+		
+		double sum = 0;
+		
+		if (strCartaFedelta.equals("si")) {
+			
+			for (int i = 0; i < prodottiIndex; i++) {
+				
+				Prodotto prodotto = prodotti[i];
+				
+				sum += prodotto.getPrezzoScontato();
+			}
+			
+		} else {
+			
+			for (int i = 0; i < prodottiIndex; i++) {
+				
+				Prodotto prodotto = prodotti[i];
+				
+				sum += prodotto.getPrezzoCompleto();
+			}
+		}
+		
+		in.close();
+		
+		System.out.println("Totale carrello: " + String.format("%.02f", sum) + "€");
 	}
 }
