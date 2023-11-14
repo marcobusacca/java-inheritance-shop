@@ -39,9 +39,11 @@ public class Cuffie extends Prodotto {
 	@Override
 	public String toString() {
 
-		return "\nCuffie\n" + super.toString() + "\n"
+		return "\n------------------\n"
+				+ "Cuffie\n" + super.toString() + "\n"
 				+ "Colore: " + getColore() + "\n"
 				+ "Wireless: " + (isWireless() ? "si" : "no") + "\n"
-				+ "Cablate: " + (isCablate() ? "si" : "no");
+				+ "Cablate: " + (isCablate() ? "si" : "no")
+				+"\n------------------";
 	}
 }

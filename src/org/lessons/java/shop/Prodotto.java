@@ -95,10 +95,10 @@ public class Prodotto {
 	@Override
 	public String toString() {
 		
-		return "Codice: " + getCodiceFormattato() + "\n"
+		return "\nCodice: " + getCodiceFormattato() + "\n"
 				+ "Nome: " + getNome() + "\n"
 				+ "Descrizione: " + getDescrizione() + "\n"
 				+ "Prezzo: " + getPrezzo() + "\n"
-				+ "Iva: " + getIva();
+				+ "Iva: " + getIva() + "\n";
 	}
 }
