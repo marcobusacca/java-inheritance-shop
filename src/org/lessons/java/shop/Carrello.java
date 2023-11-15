@@ -111,26 +111,23 @@ public class Carrello {
 		System.out.print("\nPossiedi una carta fedeltà? (si | no): ");
 		String strCartaFedelta = in.nextLine().toLowerCase();
 		
+		
 		double sum = 0;
 		
-		if (strCartaFedelta.equals("si")) {
+		for (int i = 0; i < prodottiIndex; i++) {
 			
-			for (int i = 0; i < prodottiIndex; i++) {
-				
-				Prodotto prodotto = prodotti[i];
+			Prodotto prodotto = prodotti[i];
+			
+			if (strCartaFedelta.equals("si")) {
 				
 				sum += prodotto.getPrezzoScontato();
-			}
-			
-		} else {
-			
-			for (int i = 0; i < prodottiIndex; i++) {
 				
-				Prodotto prodotto = prodotti[i];
+			} else {
 				
 				sum += prodotto.getPrezzoCompleto();
 			}
 		}
+		
 		
 		in.close();
 		

@@ -44,7 +44,7 @@ public class Cuffie extends Prodotto {
 			return getPrezzoCompleto() * (100 - 7) / 100;
 		}
 		
-		return getPrezzoCompleto() * (100 - 2) / 100;
+		return super.getPrezzoScontato();
 	}
 	
 	

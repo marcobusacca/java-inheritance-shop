@@ -36,7 +36,7 @@ public class Smartphone extends Prodotto {
 			return getPrezzoCompleto() * (100 - 5) / 100;
 		}
 		
-		return getPrezzoCompleto() * (100 - 2) / 100;
+		return super.getPrezzoScontato();
 	}
 	
 	

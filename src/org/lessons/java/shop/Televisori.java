@@ -36,7 +36,7 @@ public class Televisori extends Prodotto {
 			return getPrezzoCompleto() * (100 - 10) / 100;
 		}
 		
-		return getPrezzoCompleto() * (100 - 2) / 100;
+		return super.getPrezzoScontato();
 	}
 	
 	
